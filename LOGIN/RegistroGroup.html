@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>REGISTRATE</title>
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+
+    <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="static/css/index.css" th:href="@{/css/index.css}">
+</head>
+<body>
+
+    <div class="modal-dialog text-center">
+        <div class="col-sm-25 main-section">
+           <div class="modal-content">
+                <div class="col-12 user-img">
+                    <img src="static/img/user.png" th:src="@{/img/user.png}"/>
+                <h2 style="color: aliceblue">Registro</h2>
+				</div>
+                <form class="col-12 "  action="login.php" method="post">
+                    <div class="form-group" id="nombres">
+                        <input type="text" class="form-control" placeholder="Nombres" name="nombres"/>
+                    </div>
+					<div class="form-group" id="user=apellidos">
+                        <input type="text" class="form-control" placeholder="Apellidos" name="apellidos"/>
+                    </div>
+					<div class="form-group" id="ci">
+                        <input type="text" class="form-control" placeholder="CI" name="ci"/>
+                    </div>
+					<div class="form-group" id="correo">
+                        <input type="text" class="form-control" placeholder="Correo Electronico" name="correo"/>
+                    </div>
+					<div class="form-group" id="usuario">
+                        <input type="text" class="form-control" placeholder="Usuario" name="usuario"/>
+                    </div>
+					
+                    <div class="form-group" id="contra">
+                        <input type="password" class="form-control" placeholder="Contrasena" name="contra"/>
+                    </div>
+					 <div class="form-group" id="recontra">
+                        <input type="password" class="form-control" placeholder="Confirme Contrasena" name="recontra"/>
+                    </div>
+					
+					<button class="btn btn-primary" name="enviar" value="aceptar"><i class="fas fa-sign-in-alt"></i>Registrarse</button>
+					<div>
+						<input type="button" class="btn btn-danger" value="Cancelar" onClick="history.go(-1);"><i class="fas"></i>
+					</div>
+					
+                </form>
+              
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
